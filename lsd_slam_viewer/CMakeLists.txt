@@ -22,6 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   roslib
 )
+find_package(cmake_modules REQUIRED)
 
 find_package(OpenGL REQUIRED)
 set(QT_USE_QTOPENGL TRUE)
@@ -75,6 +76,7 @@ target_link_libraries(viewer ${QGLViewer_LIBRARIES}
 			     ${Boost_LIBRARIES}
 			     ${QT_LIBRARIES}
 			     GL glut GLU
+           X11
 		     )
 
 #add_executable(videoStitch src/main_stitchVideos.cpp)
